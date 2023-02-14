@@ -124,12 +124,10 @@ if __name__ == '__main__':
     # key = 'basicProd'
     #
     # print('输入的key是：' + key)
-    # # ip = '47.254.149.109'
-    # # password = 'Kikuu2018'
 
-    ip1 = '10.50.10.45'
+    ip1 = '10.50'
 
-    ip2 = '10.50.10.170'
+    ip2 = '10.50'
 
     # 连接redis  源库
     r = redis.Redis(host=sourceHost,  port=sourcePort, db=0,

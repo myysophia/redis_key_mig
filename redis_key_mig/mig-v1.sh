@@ -35,8 +35,7 @@ for i in `seq 1 ${tasks}`;do
         # docker stop -t 1 redis-img-${prefix}-${i}  && docker rm -f redis-img-${prefix}-${i}        
         docker rm -f redis-img-${prefix}-${i}
         (
-        echo "docker run  --name redis-img-${prefix}-${i} -v ${filepath}/redis_key_mig:/app 10.50.10.185/harbortest/redis-mig:1.1 python3 redisMigrate.py 10.50.10.45 19000 10.50.10.170 7100 ${prefix}.${i} &>/dev/null"        
-        docker run  --name redis-img-${prefix}-${i} -v ${filepath}/redis_key_mig:/app 10.50.10.185/harbortest/redis-mig:1.1 python3 redisMigrate.py 10.50.10.45 19000 10.50.10.170 7100 ${prefix}.${i} &>/dev/null
+        echo "docker run  --name redis-img-${prefix}-${i} -v ${filepath}/redis_key_mig:/app 10.50.10.185/harbortest/redis-mig:1.1 python3 redisMigrate.py 10.50 19000 10.50. 7100 ${prefix}.${i} &>/dev/null"        
         )&
 done
 wait
